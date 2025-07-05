@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  devbox:
+    image: ubuntu-ssh  # <- your existing local image
+    container_name: ubuntu-dev
+    ports:
+      - "2222:22"
+    volumes:
+      - ./workspace:/home/vishal/workspace
+    tty: true
